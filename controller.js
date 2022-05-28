@@ -5,6 +5,7 @@ app.controller("myCtrl", function($scope){
     $scope.allTodos = ["xor bite","sleep","office","coding"];
 
     $scope.add = function(){
+        $scope.errorInfo = "";
         $scope.allTodos.push($scope.addTodo);
         $scope.addTodo = "";
     }
@@ -22,5 +23,6 @@ app.controller("myCtrl", function($scope){
     $scope.update = function(){
         //console.log("test2 "+$scope.UpdateIndex);
         $scope.allTodos[$scope.UpdateIndex]=$scope.addTodo;
+        $scope.addTodo = "";
     } 
 });
